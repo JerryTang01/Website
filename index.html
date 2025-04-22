@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jerry Tang | Data Analytics</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            background: linear-gradient(135deg, #222, #000);
+            color: white;
+            padding: 60px;
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+        }
+
+        .container {
+            width: 85%;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .about-me, .project {
+            margin: 20px 0;
+            padding: 30px;
+        }
+
+        .about-me h2, .project h2 {
+            color: #ccc;
+            font-size: 28px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .about-me p, .project-description {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #bbb;
+        }
+
+        .project-description h3 {
+            font-size: 24px;
+            color: #ccc;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+
+        .project-img {
+            width: 80%;
+            max-width: 900px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .skills-list span {
+            background: #222;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+            transition: background 0.3s ease, transform 0.3s ease;
+            font-size: 16px;
+        }
+
+        .skills-list span:hover {
+            background: #fff;
+            transform: translateY(-3px);
+            color: black;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: white;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #bbb;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Slide panel styles */
+        #reportPanel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 0 20px;
+            margin-top: 20px;
+        }
+
+        #reportPanel.open {
+            max-height: 300px;
+            padding: 20px;
+        }
+
+        #reportPanel p, #reportPanel a {
+            color: #ccc;
+            font-size: 18px;
+        }
+
+        .toggle-button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #444;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .toggle-button:hover {
+            background-color: #666;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jerry Tang | Data Analytics</h1>
+    </header>
+
+    <div class="container">
+        <div class="about-me card fade-in">
+            <h2>About Me</h2>
+            <p>I am an aspiring Data Analyst specializing in data visualization. I am proficient in building dynamic dashboards, performing deep data analysis, and using statistical models to drive business decisions. My strengths lie in leveraging tools like Power BI, Tableau, and Excel for visualization, alongside Python, R, and SQL for data manipulation.</p>
+
+            <h3>Technical Skills</h3>
+            <div class="skills-list">
+                <span>Power BI</span>
+                <span>Tableau</span>
+                <span>Excel</span>
+                <span>R</span>
+                <span>Python</span>
+                <span>SQL</span>
+                <span>VBA</span>
+            </div>
+        </div>
+
+        <div class="project card fade-in">
+            <h2>Project 1: NBA Player Scoring Analysis</h2>
+            <p class="project-description">This project examines the NBA's top PPG leaders from the 2018 to 2024 season, aiming to identify the primary factors driving scoring efficiency among the league's top 50 players. This project aimed to answer two key questions: What are the primary factors that influence a player's points per game (PPG), and who have been the most efficient scorers in the NBA over the past five seasons?"</p>
+
+            <h3>Project Overview</h3>
+            <p class="project-description">The analysis focused on metrics such as PPG, FG%, and 3PT%. The goal was to explore changes in scoring efficiency and style over time, understand which player characteristics contribute to higher scoring, and visualize those trends in an interactive Power BI dashboard.</p>
+
+            <h3>Key Insights</h3>
+            <p class="project-description">Patterns were uncovered, showing how scoring efficiency has evolved. A regression analysis tells us that free throws and three-point percentage play the largest role in determining PPG. Correlations between FG%, 3PT%, and usage rate were visualized, revealing how players maintain efficiency under high volume.</p>
+
+            <h3>Tools Used</h3>
+            <p class="project-description">Power BI for dashboards and interactivity, R for statistical modeling and web scraping. These tools allowed for an in-depth view of the trends across six NBA seasons.</p>
+
+            <h3>Project Demo</h3>
+            <p class="project-description">Below is a sample of the interactive dashboard showing scoring efficiency trends across seasons. For a deeper dive, the full report can be accessed below.</p>
+
+            <div style="width: 100%; text-align: center;">
+                <img src="NBA Dashboard.PNG" alt="NBA Project Dashboard" class="project-img">
+            </div>
+            
+            <!-- Toggle Button -->
+            <div style="margin-top: 20px;">
+                <button class="toggle-button" onclick="togglePanel()">📂 View Full Report & Dashboard</button>
+            </div>
+            
+
+            <!-- Slide Panel -->
+            <div id="reportPanel">
+                <p>Explore the full PDF report here. If you're interested in viewing the full dashboard, feel free to reach out.</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="Evaluating Key Performance Metrics in NBA Scoring Efficiency.pdf" target="_blank">📄 Full Report (PDF)</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    <footer>
+        <p> JerryTang405@gmail.com | Calgary, AB | 403-808-8185 |
+    </footer>
+
+    <script>
+        // Fade-in animation
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll(".fade-in");
+            elements.forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.3}s`;
+            });
+        });
+
+        // Slide panel toggle
+        function togglePanel() {
+            const panel = document.getElementById("reportPanel");
+            panel.classList.toggle("open");
+        }
+    </script>
+</body>
+</html>
